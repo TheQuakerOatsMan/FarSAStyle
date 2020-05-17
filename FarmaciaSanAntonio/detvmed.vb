@@ -58,9 +58,7 @@
                                                 ''NewVenta.cagadamed()
                                                 NewVenta.actualizardatos()
                                                 NewVenta.cargadatos()
-                                                NewVenta.Panel3.Enabled = True
                                                 NewVenta.btnCoVta.Enabled = True
-
                                                 Close()
                                             End If
                                         End If
@@ -76,7 +74,12 @@
     End Sub
 
     Private Sub btnre10_Click(sender As Object, e As EventArgs) Handles btnre10.Click
-        NewVenta.Panel3.Enabled = True
+        NewVenta.DataMedi.Enabled = True
+        NewVenta.DataMedi.Visible = True
+        NewVenta.btndetvmed.Enabled = True
+        NewVenta.btndetvmed.Visible = True
+        NewVenta.btnre9.Enabled = True
+        NewVenta.btnre9.Visible = True
         Close()
     End Sub
 

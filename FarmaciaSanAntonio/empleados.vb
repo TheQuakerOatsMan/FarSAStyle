@@ -100,36 +100,48 @@
                                                                     If ban.Value = 22 Then
                                                                         MsgBox("EL NOMBRE DE USUARIO YA SE ENCUENTRA REGISTRADO")
                                                                     Else
-                                                                        If ban.Value = 23 Then
-                                                                            MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                                                        If ban.Value = 24 Then
+                                                                            MsgBox("EL DEPTO NO CONCUERDA CON EL PUESTO")
                                                                         Else
-                                                                            If ban.Value = 24 Then
+                                                                            If ban.Value = 25 Then
                                                                                 MsgBox("EL DEPTO NO CONCUERDA CON EL PUESTO")
                                                                             Else
-                                                                                If ban.Value = 25 Then
+                                                                                If ban.Value = 26 Then
                                                                                     MsgBox("EL DEPTO NO CONCUERDA CON EL PUESTO")
                                                                                 Else
-                                                                                    If ban.Value = 26 Then
-                                                                                        MsgBox("EL DEPTO NO CONCUERDA CON EL PUESTO")
+                                                                                    If ban.Value = 50 Then
+                                                                                        MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
                                                                                     Else
-                                                                                        consultaV = New ADODB.Recordset
-                                                                                        consultaV = conexionv.Execute(consql)
-                                                                                        If Not consultaV.EOF Then
-                                                                                            clave = consultaV.Fields(0).Value
+                                                                                        If ban.Value = 51 Then
+                                                                                            MsgBox("EL USUARIO NO EXISTE")
+                                                                                        Else
+                                                                                            If ban.Value = 52 Then
+                                                                                                MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                                                                            Else
+                                                                                                If ban.Value = 53 Then
+                                                                                                    MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                                                                                Else
+                                                                                                    consultaV = New ADODB.Recordset
+                                                                                                    consultaV = conexionv.Execute(consql)
+                                                                                                    If Not consultaV.EOF Then
+                                                                                                        clave = consultaV.Fields(0).Value
+                                                                                                    End If
+                                                                                                    MsgBox("La cve del empleado es: " & clave & " INSERCION CORRECTA")
+                                                                                                    NOMEMP.Text = ""
+                                                                                                    DIREMP.Text = ""
+                                                                                                    CORREOEMP.Text = ""
+                                                                                                    TELEMP.Text = ""
+                                                                                                    EDADEMP.Text = ""
+                                                                                                    PUESTO.Text = ""
+                                                                                                    DEPTO.Text = ""
+                                                                                                    USER.Text = ""
+                                                                                                    PASS.Text = ""
+                                                                                                    ACTIVO.Text = ""
+                                                                                                    'AÑADIR LOS CAMPOS QUE FALTAN'
+                                                                                                    clave = 0
+                                                                                                End If
+                                                                                            End If
                                                                                         End If
-                                                                                        MsgBox("La cve del empleado es: " & clave & " INSERCION CORRECTA")
-                                                                                        NOMEMP.Text = ""
-                                                                                        DIREMP.Text = ""
-                                                                                        CORREOEMP.Text = ""
-                                                                                        TELEMP.Text = ""
-                                                                                        EDADEMP.Text = ""
-                                                                                        PUESTO.Text = ""
-                                                                                        DEPTO.Text = ""
-                                                                                        USER.Text = ""
-                                                                                        PASS.Text = ""
-                                                                                        ACTIVO.Text = ""
-                                                                                        'AÑADIR LOS CAMPOS QUE FALTAN'
-                                                                                        clave = 0
                                                                                     End If
                                                                                 End If
                                                                             End If
@@ -202,15 +214,29 @@
             Else
                 If ban.Value = 3 Then
                     MsgBox("EL EMPLEADO YA SE ENCUENTRA DADO DE ALTA")
-
                 Else
                     If ban.Value = 4 Then
                         MsgBox("INICIE UNA SESION PARA CONTINUAR")
-
                     Else
-                        MsgBox("EMPLEADO REACTIVADO")
-                        comboreac.SelectedText = ""
-                        'AÑADIR LOS CAMPOS QUE FALTAN'
+                        If ban.Value = 50 Then
+                            MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
+                        Else
+                            If ban.Value = 51 Then
+                                MsgBox("EL USUARIO NO EXISTE")
+                            Else
+                                If ban.Value = 52 Then
+                                    MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                Else
+                                    If ban.Value = 53 Then
+                                        MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                    Else
+                                        MsgBox("EMPLEADO REACTIVADO")
+                                        comboreac.SelectedText = ""
+                                        'AÑADIR LOS CAMPOS QUE FALTAN'
+                                    End If
+                                End If
+                            End If
+                        End If
                     End If
                 End If
             End If
@@ -259,19 +285,28 @@
             Else
                 If ban.Value = 3 Then
                     MsgBox("AUN EXISTEN VENTAS REALIZADAS POR ESTE EMPLEADO")
-
                 Else
                     If ban.Value = 4 Then
                         MsgBox("EL USUARIO NO TIENE UNA SESION INICIADA, CIERRE ESA SESION PARA TERMINAR")
-
                     Else
-                        If ban.Value = 5 Then
-                            MsgBox("SESION NO INICIADA")
-
+                        If ban.Value = 50 Then
+                            MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
                         Else
-                            MsgBox("EMPLEADO ELIMINADO CON EXITO")
-                            'AÑADIR LOS CAMPOS QUE FALTAN'
-                            comboeliminar.SelectedText = ""
+                            If ban.Value = 51 Then
+                                MsgBox("EL USUARIO NO EXISTE")
+                            Else
+                                If ban.Value = 52 Then
+                                    MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                Else
+                                    If ban.Value = 53 Then
+                                        MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                    Else
+                                        MsgBox("EMPLEADO ELIMINADO CON EXITO")
+                                        'AÑADIR LOS CAMPOS QUE FALTAN'
+                                        comboeliminar.SelectedText = ""
+                                    End If
+                                End If
+                            End If
                         End If
                     End If
                 End If
@@ -325,14 +360,25 @@
                 Else
                     If ban.Value = 4 Then
                         MsgBox("EL USUARIO NO TIENE UNA SESION INICIADA, CIERRE ESA SESION PARA TERMINAR")
-
                     Else
-                        If ban.Value = 5 Then
-                            MsgBox("SESION NO INICIADA")
+                        If ban.Value = 50 Then
+                            MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
                         Else
-                            MsgBox("EMPLEADO DADO DE BAJA TEMPORALMENTE")
-                            combotemporal.SelectedText = ""
-                            'AÑADIR LOS CAMPOS QUE FALTAN'
+                            If ban.Value = 51 Then
+                                MsgBox("EL USUARIO NO EXISTE")
+                            Else
+                                If ban.Value = 52 Then
+                                    MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                Else
+                                    If ban.Value = 53 Then
+                                        MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                    Else
+                                        MsgBox("EMPLEADO DADO DE BAJA TEMPORALMENTE")
+                                        combotemporal.SelectedText = ""
+                                        'AÑADIR LOS CAMPOS QUE FALTAN'
+                                    End If
+                                End If
+                            End If
                         End If
                     End If
                 End If

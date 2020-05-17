@@ -61,10 +61,9 @@ Partial Class modProveedores
         Me.btnBB.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnBB.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBB.ForeColor = System.Drawing.Color.Black
-        Me.btnBB.Location = New System.Drawing.Point(10, 660)
-        Me.btnBB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnBB.Location = New System.Drawing.Point(7, 429)
         Me.btnBB.Name = "btnBB"
-        Me.btnBB.Size = New System.Drawing.Size(288, 55)
+        Me.btnBB.Size = New System.Drawing.Size(192, 36)
         Me.btnBB.TabIndex = 89
         Me.btnBB.Text = "BUSQUEDA"
         Me.btnBB.UseVisualStyleBackColor = False
@@ -75,10 +74,9 @@ Partial Class modProveedores
         Me.btncan.BackColor = System.Drawing.Color.Navy
         Me.btncan.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncan.ForeColor = System.Drawing.Color.White
-        Me.btncan.Location = New System.Drawing.Point(725, 520)
-        Me.btncan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btncan.Location = New System.Drawing.Point(483, 338)
         Me.btncan.Name = "btncan"
-        Me.btncan.Size = New System.Drawing.Size(288, 55)
+        Me.btncan.Size = New System.Drawing.Size(192, 36)
         Me.btncan.TabIndex = 87
         Me.btncan.Text = "Cancelar"
         Me.btncan.UseVisualStyleBackColor = False
@@ -88,10 +86,9 @@ Partial Class modProveedores
         Me.btnre2.BackColor = System.Drawing.Color.Navy
         Me.btnre2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnre2.ForeColor = System.Drawing.Color.White
-        Me.btnre2.Location = New System.Drawing.Point(417, 660)
-        Me.btnre2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnre2.Location = New System.Drawing.Point(278, 429)
         Me.btnre2.Name = "btnre2"
-        Me.btnre2.Size = New System.Drawing.Size(288, 55)
+        Me.btnre2.Size = New System.Drawing.Size(192, 36)
         Me.btnre2.TabIndex = 86
         Me.btnre2.Text = "REGRESAR"
         Me.btnre2.UseVisualStyleBackColor = False
@@ -102,10 +99,9 @@ Partial Class modProveedores
         Me.salirME.BackColor = System.Drawing.Color.Navy
         Me.salirME.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.salirME.ForeColor = System.Drawing.Color.White
-        Me.salirME.Location = New System.Drawing.Point(725, 660)
-        Me.salirME.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.salirME.Location = New System.Drawing.Point(483, 429)
         Me.salirME.Name = "salirME"
-        Me.salirME.Size = New System.Drawing.Size(288, 55)
+        Me.salirME.Size = New System.Drawing.Size(192, 36)
         Me.salirME.TabIndex = 85
         Me.salirME.Text = "SALIR"
         Me.salirME.UseVisualStyleBackColor = False
@@ -115,10 +111,9 @@ Partial Class modProveedores
         Me.btnApli.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnApli.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnApli.ForeColor = System.Drawing.Color.Black
-        Me.btnApli.Location = New System.Drawing.Point(725, 590)
-        Me.btnApli.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnApli.Location = New System.Drawing.Point(483, 383)
         Me.btnApli.Name = "btnApli"
-        Me.btnApli.Size = New System.Drawing.Size(288, 55)
+        Me.btnApli.Size = New System.Drawing.Size(192, 36)
         Me.btnApli.TabIndex = 84
         Me.btnApli.Text = "APLICAR CAMBIOS"
         Me.btnApli.UseVisualStyleBackColor = False
@@ -128,10 +123,9 @@ Partial Class modProveedores
         Me.modEGral.BackColor = System.Drawing.Color.LightSteelBlue
         Me.modEGral.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.modEGral.ForeColor = System.Drawing.Color.Black
-        Me.modEGral.Location = New System.Drawing.Point(725, 59)
-        Me.modEGral.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.modEGral.Location = New System.Drawing.Point(483, 38)
         Me.modEGral.Name = "modEGral"
-        Me.modEGral.Size = New System.Drawing.Size(288, 55)
+        Me.modEGral.Size = New System.Drawing.Size(192, 36)
         Me.modEGral.TabIndex = 81
         Me.modEGral.Text = "MODIFICAR"
         Me.modEGral.UseVisualStyleBackColor = False
@@ -160,97 +154,89 @@ Partial Class modProveedores
         Me.PanelEmp.Controls.Add(Me.Label3)
         Me.PanelEmp.Controls.Add(Me.Label2)
         Me.PanelEmp.Controls.Add(Me.Label1)
-        Me.PanelEmp.Location = New System.Drawing.Point(12, 59)
-        Me.PanelEmp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PanelEmp.Location = New System.Drawing.Point(8, 38)
         Me.PanelEmp.Name = "PanelEmp"
-        Me.PanelEmp.Size = New System.Drawing.Size(693, 586)
+        Me.PanelEmp.Size = New System.Drawing.Size(462, 381)
         Me.PanelEmp.TabIndex = 79
         '
         'CVEp
         '
         Me.CVEp.FormattingEnabled = True
-        Me.CVEp.Location = New System.Drawing.Point(213, 91)
+        Me.CVEp.Location = New System.Drawing.Point(142, 59)
+        Me.CVEp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CVEp.Name = "CVEp"
-        Me.CVEp.Size = New System.Drawing.Size(192, 28)
+        Me.CVEp.Size = New System.Drawing.Size(129, 21)
         Me.CVEp.TabIndex = 58
         '
         'CP
         '
         Me.CP.Enabled = False
-        Me.CP.Location = New System.Drawing.Point(213, 404)
-        Me.CP.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CP.Location = New System.Drawing.Point(142, 263)
         Me.CP.MaxLength = 8
         Me.CP.Name = "CP"
-        Me.CP.Size = New System.Drawing.Size(466, 26)
+        Me.CP.Size = New System.Drawing.Size(312, 20)
         Me.CP.TabIndex = 57
         '
         'ESTADO
         '
         Me.ESTADO.Enabled = False
-        Me.ESTADO.Location = New System.Drawing.Point(213, 355)
-        Me.ESTADO.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ESTADO.Location = New System.Drawing.Point(142, 231)
         Me.ESTADO.MaxLength = 20
         Me.ESTADO.Name = "ESTADO"
-        Me.ESTADO.Size = New System.Drawing.Size(466, 26)
+        Me.ESTADO.Size = New System.Drawing.Size(312, 20)
         Me.ESTADO.TabIndex = 56
         '
         'TELEFONO
         '
         Me.TELEFONO.Enabled = False
-        Me.TELEFONO.Location = New System.Drawing.Point(213, 311)
-        Me.TELEFONO.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TELEFONO.Location = New System.Drawing.Point(142, 202)
         Me.TELEFONO.MaxLength = 15
         Me.TELEFONO.Name = "TELEFONO"
-        Me.TELEFONO.Size = New System.Drawing.Size(466, 26)
+        Me.TELEFONO.Size = New System.Drawing.Size(312, 20)
         Me.TELEFONO.TabIndex = 55
         '
         'CORREO
         '
         Me.CORREO.Enabled = False
-        Me.CORREO.Location = New System.Drawing.Point(213, 490)
-        Me.CORREO.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CORREO.Location = New System.Drawing.Point(142, 318)
         Me.CORREO.MaxLength = 30
         Me.CORREO.Name = "CORREO"
-        Me.CORREO.Size = New System.Drawing.Size(466, 26)
+        Me.CORREO.Size = New System.Drawing.Size(312, 20)
         Me.CORREO.TabIndex = 52
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(15, 493)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Location = New System.Drawing.Point(10, 320)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(201, 20)
+        Me.Label11.Size = New System.Drawing.Size(135, 13)
         Me.Label11.TabIndex = 51
         Me.Label11.Text = "CORREO ELECTRÓNICO:"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(15, 407)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(10, 265)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(144, 20)
+        Me.Label10.Size = New System.Drawing.Size(97, 13)
         Me.Label10.TabIndex = 49
         Me.Label10.Text = "CÓDIGO POSTAL:"
         '
         'LOCALIDAD
         '
         Me.LOCALIDAD.Enabled = False
-        Me.LOCALIDAD.Location = New System.Drawing.Point(213, 448)
-        Me.LOCALIDAD.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.LOCALIDAD.Location = New System.Drawing.Point(142, 291)
         Me.LOCALIDAD.MaxLength = 30
         Me.LOCALIDAD.Name = "LOCALIDAD"
-        Me.LOCALIDAD.Size = New System.Drawing.Size(466, 26)
+        Me.LOCALIDAD.Size = New System.Drawing.Size(312, 20)
         Me.LOCALIDAD.TabIndex = 48
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(15, 451)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(10, 293)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(105, 20)
+        Me.Label9.Size = New System.Drawing.Size(70, 13)
         Me.Label9.TabIndex = 47
         Me.Label9.Text = "LOCALIDAD:"
         '
@@ -258,131 +244,120 @@ Partial Class modProveedores
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(137, 32)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(91, 21)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(417, 29)
+        Me.Label8.Size = New System.Drawing.Size(261, 18)
         Me.Label8.TabIndex = 46
         Me.Label8.Text = "MODIFICACIÓN DE PROVEEDORES"
         '
         'DIREMP
         '
         Me.DIREMP.Enabled = False
-        Me.DIREMP.Location = New System.Drawing.Point(213, 268)
-        Me.DIREMP.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DIREMP.Location = New System.Drawing.Point(142, 174)
         Me.DIREMP.MaxLength = 50
         Me.DIREMP.Name = "DIREMP"
-        Me.DIREMP.Size = New System.Drawing.Size(466, 26)
+        Me.DIREMP.Size = New System.Drawing.Size(312, 20)
         Me.DIREMP.TabIndex = 44
         '
         'DIRPROV
         '
         Me.DIRPROV.Enabled = False
-        Me.DIRPROV.Location = New System.Drawing.Point(213, 224)
-        Me.DIRPROV.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DIRPROV.Location = New System.Drawing.Point(142, 146)
         Me.DIRPROV.MaxLength = 50
         Me.DIRPROV.Name = "DIRPROV"
-        Me.DIRPROV.Size = New System.Drawing.Size(466, 26)
+        Me.DIRPROV.Size = New System.Drawing.Size(312, 20)
         Me.DIRPROV.TabIndex = 43
         '
         'EMPRESA
         '
         Me.EMPRESA.Enabled = False
-        Me.EMPRESA.Location = New System.Drawing.Point(213, 181)
-        Me.EMPRESA.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.EMPRESA.Location = New System.Drawing.Point(142, 118)
         Me.EMPRESA.MaxLength = 30
         Me.EMPRESA.Name = "EMPRESA"
-        Me.EMPRESA.Size = New System.Drawing.Size(466, 26)
+        Me.EMPRESA.Size = New System.Drawing.Size(312, 20)
         Me.EMPRESA.TabIndex = 42
         '
         'NOMPROV
         '
         Me.NOMPROV.Enabled = False
-        Me.NOMPROV.Location = New System.Drawing.Point(213, 137)
-        Me.NOMPROV.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.NOMPROV.Location = New System.Drawing.Point(142, 89)
         Me.NOMPROV.MaxLength = 50
         Me.NOMPROV.Name = "NOMPROV"
-        Me.NOMPROV.Size = New System.Drawing.Size(466, 26)
+        Me.NOMPROV.Size = New System.Drawing.Size(312, 20)
         Me.NOMPROV.TabIndex = 41
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(15, 361)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(10, 235)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(79, 20)
+        Me.Label7.Size = New System.Drawing.Size(54, 13)
         Me.Label7.TabIndex = 39
         Me.Label7.Text = "ESTADO:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(15, 314)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(10, 204)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(98, 20)
+        Me.Label6.Size = New System.Drawing.Size(67, 13)
         Me.Label6.TabIndex = 38
         Me.Label6.Text = "TELÉFONO:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(15, 271)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(10, 176)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(186, 20)
+        Me.Label5.Size = New System.Drawing.Size(124, 13)
         Me.Label5.TabIndex = 37
         Me.Label5.Text = "DIRECCIÓN EMPRESA:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(15, 227)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(10, 148)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(152, 20)
+        Me.Label4.Size = New System.Drawing.Size(102, 13)
         Me.Label4.TabIndex = 36
         Me.Label4.Text = "DIRECCIÓN PROV:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(15, 184)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(10, 120)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 20)
+        Me.Label3.Size = New System.Drawing.Size(62, 13)
         Me.Label3.TabIndex = 35
         Me.Label3.Text = "EMPRESA:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(15, 140)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(10, 91)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(190, 20)
+        Me.Label2.Size = New System.Drawing.Size(128, 13)
         Me.Label2.TabIndex = 34
         Me.Label2.Text = "NOMBRE PROVEEDOR:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(15, 94)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(10, 61)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 20)
+        Me.Label1.Size = New System.Drawing.Size(61, 13)
         Me.Label1.TabIndex = 32
         Me.Label1.Text = "CVEPROV:"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Font = New System.Drawing.Font("MetroDF", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label12.Location = New System.Drawing.Point(5, 1)
+        Me.Label12.Location = New System.Drawing.Point(3, 1)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(436, 46)
+        Me.Label12.Size = New System.Drawing.Size(323, 21)
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Farmacia San Antonio"
         '
@@ -394,15 +369,16 @@ Partial Class modProveedores
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1026, 52)
+        Me.Panel1.Size = New System.Drawing.Size(684, 35)
         Me.Panel1.TabIndex = 90
         '
         'modProveedores
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1026, 724)
+        Me.ClientSize = New System.Drawing.Size(684, 471)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnBB)
         Me.Controls.Add(Me.btncan)
@@ -412,6 +388,7 @@ Partial Class modProveedores
         Me.Controls.Add(Me.modEGral)
         Me.Controls.Add(Me.PanelEmp)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "modProveedores"
         Me.Text = "Modificación de Proveedores"
         Me.PanelEmp.ResumeLayout(False)

@@ -23,10 +23,6 @@ Partial Class NewVenta
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.DataMedi = New System.Windows.Forms.DataGridView()
-        Me.btndetvmed = New System.Windows.Forms.Button()
-        Me.btnre9 = New System.Windows.Forms.Button()
         Me.MEDICAMENTOSBindingSource5 = New System.Windows.Forms.BindingSource(Me.components)
         Me.FarmSAntonioVentasDataVTAMED = New FarmaciaSanAntonio.FarmSAntonioVentasDataVTAMED()
         Me.MEDICAMENTOSBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
@@ -35,7 +31,6 @@ Partial Class NewVenta
         Me.FarmSAntonioDataSet13 = New FarmaciaSanAntonio.FarmSAntonioDataSet13()
         Me.MEDICAMENTOSBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MEDICAMENTOSBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.addProd = New System.Windows.Forms.Button()
         Me.btnre = New System.Windows.Forms.Button()
         Me.DataProd = New System.Windows.Forms.DataGridView()
@@ -78,8 +73,10 @@ Partial Class NewVenta
         Me.MEDICAMENTOSTableAdapter1 = New FarmaciaSanAntonio.FarmSAntonioVentasDataVTAMEDTableAdapters.MEDICAMENTOSTableAdapter()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel3.SuspendLayout()
-        CType(Me.DataMedi, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BTNEREVTA = New System.Windows.Forms.Button()
+        Me.btnre9 = New System.Windows.Forms.Button()
+        Me.btndetvmed = New System.Windows.Forms.Button()
+        Me.DataMedi = New System.Windows.Forms.DataGridView()
         CType(Me.MEDICAMENTOSBindingSource5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FarmSAntonioVentasDataVTAMED, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MEDICAMENTOSBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,7 +85,6 @@ Partial Class NewVenta
         CType(Me.FarmSAntonioDataSet13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MEDICAMENTOSBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MEDICAMENTOSBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
         CType(Me.DataProd, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PRODUCTOSBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FarmSAntonioVentasDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,54 +98,8 @@ Partial Class NewVenta
         CType(Me.FarmSAntonioVentasDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PRODUCTOSBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.DataMedi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.DataMedi)
-        Me.Panel3.Controls.Add(Me.btndetvmed)
-        Me.Panel3.Controls.Add(Me.btnre9)
-        Me.Panel3.Location = New System.Drawing.Point(456, 57)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(988, 526)
-        Me.Panel3.TabIndex = 21
-        Me.Panel3.Visible = False
-        '
-        'DataMedi
-        '
-        Me.DataMedi.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataMedi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataMedi.Location = New System.Drawing.Point(9, 11)
-        Me.DataMedi.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.DataMedi.Name = "DataMedi"
-        Me.DataMedi.RowHeadersWidth = 62
-        Me.DataMedi.Size = New System.Drawing.Size(980, 452)
-        Me.DataMedi.TabIndex = 3
-        '
-        'btndetvmed
-        '
-        Me.btndetvmed.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.btndetvmed.Location = New System.Drawing.Point(597, 480)
-        Me.btndetvmed.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btndetvmed.Name = "btndetvmed"
-        Me.btndetvmed.Size = New System.Drawing.Size(177, 42)
-        Me.btndetvmed.TabIndex = 2
-        Me.btndetvmed.Text = "AGREGAR..."
-        Me.btndetvmed.UseVisualStyleBackColor = False
-        '
-        'btnre9
-        '
-        Me.btnre9.BackColor = System.Drawing.Color.Navy
-        Me.btnre9.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnre9.Location = New System.Drawing.Point(783, 480)
-        Me.btnre9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnre9.Name = "btnre9"
-        Me.btnre9.Size = New System.Drawing.Size(177, 42)
-        Me.btnre9.TabIndex = 1
-        Me.btnre9.Text = "REGRESAR"
-        Me.btnre9.UseVisualStyleBackColor = False
         '
         'MEDICAMENTOSBindingSource5
         '
@@ -189,25 +139,12 @@ Partial Class NewVenta
         '
         Me.MEDICAMENTOSBindingSource1.DataMember = "MEDICAMENTOS"
         '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.addProd)
-        Me.Panel2.Controls.Add(Me.btnre)
-        Me.Panel2.Controls.Add(Me.DataProd)
-        Me.Panel2.Location = New System.Drawing.Point(456, 57)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(988, 526)
-        Me.Panel2.TabIndex = 20
-        Me.Panel2.Visible = False
-        '
         'addProd
         '
         Me.addProd.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.addProd.Location = New System.Drawing.Point(597, 480)
-        Me.addProd.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.addProd.Location = New System.Drawing.Point(734, 341)
         Me.addProd.Name = "addProd"
-        Me.addProd.Size = New System.Drawing.Size(177, 42)
+        Me.addProd.Size = New System.Drawing.Size(118, 27)
         Me.addProd.TabIndex = 2
         Me.addProd.Text = "AGREGAR..."
         Me.addProd.UseVisualStyleBackColor = False
@@ -216,10 +153,9 @@ Partial Class NewVenta
         '
         Me.btnre.BackColor = System.Drawing.Color.Navy
         Me.btnre.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnre.Location = New System.Drawing.Point(783, 480)
-        Me.btnre.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnre.Location = New System.Drawing.Point(876, 341)
         Me.btnre.Name = "btnre"
-        Me.btnre.Size = New System.Drawing.Size(177, 42)
+        Me.btnre.Size = New System.Drawing.Size(118, 27)
         Me.btnre.TabIndex = 1
         Me.btnre.Text = "REGRESAR"
         Me.btnre.UseVisualStyleBackColor = False
@@ -227,11 +163,10 @@ Partial Class NewVenta
         'DataProd
         '
         Me.DataProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataProd.Location = New System.Drawing.Point(10, 0)
-        Me.DataProd.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DataProd.Location = New System.Drawing.Point(342, 40)
         Me.DataProd.Name = "DataProd"
         Me.DataProd.RowHeadersWidth = 62
-        Me.DataProd.Size = New System.Drawing.Size(980, 452)
+        Me.DataProd.Size = New System.Drawing.Size(653, 294)
         Me.DataProd.TabIndex = 0
         '
         'PRODUCTOSBindingSource2
@@ -261,11 +196,10 @@ Partial Class NewVenta
         'data2
         '
         Me.data2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.data2.Location = New System.Drawing.Point(321, 627)
-        Me.data2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.data2.Location = New System.Drawing.Point(214, 408)
         Me.data2.Name = "data2"
         Me.data2.RowHeadersWidth = 62
-        Me.data2.Size = New System.Drawing.Size(555, 166)
+        Me.data2.Size = New System.Drawing.Size(370, 108)
         Me.data2.TabIndex = 34
         '
         'panelTotal
@@ -280,59 +214,53 @@ Partial Class NewVenta
         Me.panelTotal.Controls.Add(Me.Label4)
         Me.panelTotal.Controls.Add(Me.Label3)
         Me.panelTotal.Controls.Add(Me.totalvta)
-        Me.panelTotal.Location = New System.Drawing.Point(24, 238)
-        Me.panelTotal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.panelTotal.Location = New System.Drawing.Point(16, 155)
         Me.panelTotal.Name = "panelTotal"
-        Me.panelTotal.Size = New System.Drawing.Size(400, 328)
+        Me.panelTotal.Size = New System.Drawing.Size(267, 213)
         Me.panelTotal.TabIndex = 33
         '
         'ctpag
         '
         Me.ctpag.FormattingEnabled = True
         Me.ctpag.Items.AddRange(New Object() {"EFECTIVO" & Global.Microsoft.VisualBasic.ChrW(9), "TARJETA DE DEBITO", "TARJETA DE CREDITO"})
-        Me.ctpag.Location = New System.Drawing.Point(190, 23)
-        Me.ctpag.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ctpag.Location = New System.Drawing.Point(127, 15)
         Me.ctpag.MaxLength = 20
         Me.ctpag.Name = "ctpag"
-        Me.ctpag.Size = New System.Drawing.Size(188, 28)
+        Me.ctpag.Size = New System.Drawing.Size(127, 21)
         Me.ctpag.TabIndex = 22
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label7.Location = New System.Drawing.Point(32, 120)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(21, 78)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(59, 20)
+        Me.Label7.Size = New System.Drawing.Size(39, 13)
         Me.Label7.TabIndex = 20
         Me.Label7.Text = "IVA ($)"
         '
         'iva
         '
-        Me.iva.Location = New System.Drawing.Point(190, 120)
-        Me.iva.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.iva.Location = New System.Drawing.Point(127, 78)
         Me.iva.Name = "iva"
-        Me.iva.Size = New System.Drawing.Size(180, 26)
+        Me.iva.Size = New System.Drawing.Size(121, 20)
         Me.iva.TabIndex = 21
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label6.Location = New System.Drawing.Point(32, 75)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(21, 49)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(120, 20)
+        Me.Label6.Size = New System.Drawing.Size(82, 13)
         Me.Label6.TabIndex = 18
         Me.Label6.Text = "SUBTOTAL ($):"
         '
         'subt
         '
-        Me.subt.Location = New System.Drawing.Point(190, 71)
-        Me.subt.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.subt.Location = New System.Drawing.Point(127, 46)
         Me.subt.Name = "subt"
-        Me.subt.Size = New System.Drawing.Size(180, 26)
+        Me.subt.Size = New System.Drawing.Size(121, 20)
         Me.subt.TabIndex = 19
         '
         'btnCoVta
@@ -340,10 +268,9 @@ Partial Class NewVenta
         Me.btnCoVta.AutoEllipsis = True
         Me.btnCoVta.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnCoVta.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.btnCoVta.Location = New System.Drawing.Point(78, 242)
-        Me.btnCoVta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnCoVta.Location = New System.Drawing.Point(52, 157)
         Me.btnCoVta.Name = "btnCoVta"
-        Me.btnCoVta.Size = New System.Drawing.Size(236, 51)
+        Me.btnCoVta.Size = New System.Drawing.Size(157, 33)
         Me.btnCoVta.TabIndex = 17
         Me.btnCoVta.Text = "COBRAR VENTA"
         Me.btnCoVta.UseVisualStyleBackColor = False
@@ -352,10 +279,9 @@ Partial Class NewVenta
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label4.Location = New System.Drawing.Point(32, 35)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(21, 23)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(126, 20)
+        Me.Label4.Size = New System.Drawing.Size(86, 13)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "TIPO DE PAGO:"
         '
@@ -363,65 +289,58 @@ Partial Class NewVenta
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label3.Location = New System.Drawing.Point(32, 177)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(21, 115)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(139, 20)
+        Me.Label3.Size = New System.Drawing.Size(95, 13)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "TOTAL A PAGAR:"
         '
         'totalvta
         '
-        Me.totalvta.Location = New System.Drawing.Point(190, 172)
-        Me.totalvta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.totalvta.Location = New System.Drawing.Point(127, 112)
         Me.totalvta.Name = "totalvta"
-        Me.totalvta.Size = New System.Drawing.Size(180, 26)
+        Me.totalvta.Size = New System.Drawing.Size(121, 20)
         Me.totalvta.TabIndex = 12
         '
         'cvvta
         '
         Me.cvvta.Enabled = False
-        Me.cvvta.Location = New System.Drawing.Point(190, 87)
-        Me.cvvta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cvvta.Location = New System.Drawing.Point(127, 57)
         Me.cvvta.Name = "cvvta"
-        Me.cvvta.Size = New System.Drawing.Size(204, 26)
+        Me.cvvta.Size = New System.Drawing.Size(137, 20)
         Me.cvvta.TabIndex = 32
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(24, 90)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(16, 58)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(158, 20)
+        Me.Label5.Size = New System.Drawing.Size(106, 13)
         Me.Label5.TabIndex = 31
         Me.Label5.Text = "No.Venta (CVEVTA):"
         '
         'ctNEmp
         '
         Me.ctNEmp.Enabled = False
-        Me.ctNEmp.Location = New System.Drawing.Point(188, 176)
-        Me.ctNEmp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ctNEmp.Location = New System.Drawing.Point(125, 114)
         Me.ctNEmp.Name = "ctNEmp"
-        Me.ctNEmp.Size = New System.Drawing.Size(206, 26)
+        Me.ctNEmp.Size = New System.Drawing.Size(139, 20)
         Me.ctNEmp.TabIndex = 30
         '
         'ctemp
         '
         Me.ctemp.Enabled = False
-        Me.ctemp.Location = New System.Drawing.Point(190, 132)
-        Me.ctemp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ctemp.Location = New System.Drawing.Point(127, 86)
         Me.ctemp.Name = "ctemp"
-        Me.ctemp.Size = New System.Drawing.Size(204, 26)
+        Me.ctemp.Size = New System.Drawing.Size(137, 20)
         Me.ctemp.TabIndex = 29
         '
         'addm
         '
         Me.addm.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.addm.Location = New System.Drawing.Point(24, 661)
-        Me.addm.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.addm.Location = New System.Drawing.Point(16, 430)
         Me.addm.Name = "addm"
-        Me.addm.Size = New System.Drawing.Size(226, 51)
+        Me.addm.Size = New System.Drawing.Size(151, 33)
         Me.addm.TabIndex = 28
         Me.addm.Text = "AGREGAR MEDICAMENTO"
         Me.addm.UseVisualStyleBackColor = False
@@ -429,10 +348,9 @@ Partial Class NewVenta
         'btnadd
         '
         Me.btnadd.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.btnadd.Location = New System.Drawing.Point(24, 601)
-        Me.btnadd.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnadd.Location = New System.Drawing.Point(16, 391)
         Me.btnadd.Name = "btnadd"
-        Me.btnadd.Size = New System.Drawing.Size(226, 51)
+        Me.btnadd.Size = New System.Drawing.Size(151, 33)
         Me.btnadd.TabIndex = 27
         Me.btnadd.Text = "AGREGAR PRODUCTO"
         Me.btnadd.UseVisualStyleBackColor = False
@@ -441,10 +359,9 @@ Partial Class NewVenta
         '
         Me.btnCancel.BackColor = System.Drawing.Color.Navy
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnCancel.Location = New System.Drawing.Point(24, 721)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnCancel.Location = New System.Drawing.Point(16, 469)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(226, 51)
+        Me.btnCancel.Size = New System.Drawing.Size(151, 33)
         Me.btnCancel.TabIndex = 26
         Me.btnCancel.Text = "CANCELAR VENTA"
         Me.btnCancel.UseVisualStyleBackColor = False
@@ -452,50 +369,45 @@ Partial Class NewVenta
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(24, 179)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(16, 116)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 20)
+        Me.Label2.Size = New System.Drawing.Size(60, 13)
         Me.Label2.TabIndex = 25
         Me.Label2.Text = "Lo atiende:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(24, 135)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(16, 88)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(109, 20)
+        Me.Label1.Size = New System.Drawing.Size(74, 13)
         Me.Label1.TabIndex = 24
         Me.Label1.Text = "Empleado No:"
         '
         'data1
         '
         Me.data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.data1.Location = New System.Drawing.Point(904, 627)
-        Me.data1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.data1.Location = New System.Drawing.Point(603, 408)
         Me.data1.Name = "data1"
         Me.data1.RowHeadersWidth = 62
-        Me.data1.Size = New System.Drawing.Size(560, 166)
+        Me.data1.Size = New System.Drawing.Size(373, 108)
         Me.data1.TabIndex = 23
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(508, 601)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(339, 391)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(166, 20)
+        Me.Label8.Size = New System.Drawing.Size(113, 13)
         Me.Label8.TabIndex = 35
         Me.Label8.Text = "PANEL PRODUCTOS"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(1096, 601)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(731, 391)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(195, 20)
+        Me.Label9.Size = New System.Drawing.Size(132, 13)
         Me.Label9.TabIndex = 36
         Me.Label9.Text = "PANEL MEDICAMENTOS"
         '
@@ -538,9 +450,10 @@ Partial Class NewVenta
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label10.Location = New System.Drawing.Point(5, 1)
+        Me.Label10.Location = New System.Drawing.Point(3, 1)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(436, 46)
+        Me.Label10.Size = New System.Drawing.Size(301, 31)
         Me.Label10.TabIndex = 0
         Me.Label10.Text = "Farmacia San Antonio"
         '
@@ -552,20 +465,70 @@ Partial Class NewVenta
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1484, 52)
+        Me.Panel1.Size = New System.Drawing.Size(1006, 35)
         Me.Panel1.TabIndex = 84
+        '
+        'BTNEREVTA
+        '
+        Me.BTNEREVTA.BackColor = System.Drawing.Color.Navy
+        Me.BTNEREVTA.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.BTNEREVTA.Location = New System.Drawing.Point(16, 483)
+        Me.BTNEREVTA.Name = "BTNEREVTA"
+        Me.BTNEREVTA.Size = New System.Drawing.Size(175, 33)
+        Me.BTNEREVTA.TabIndex = 85
+        Me.BTNEREVTA.Text = "CANCELAR Y REGRESAR >>"
+        Me.BTNEREVTA.UseVisualStyleBackColor = False
+        '
+        'btnre9
+        '
+        Me.btnre9.BackColor = System.Drawing.Color.Navy
+        Me.btnre9.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnre9.Location = New System.Drawing.Point(876, 341)
+        Me.btnre9.Name = "btnre9"
+        Me.btnre9.Size = New System.Drawing.Size(118, 27)
+        Me.btnre9.TabIndex = 1
+        Me.btnre9.Text = "REGRESAR"
+        Me.btnre9.UseVisualStyleBackColor = False
+        '
+        'btndetvmed
+        '
+        Me.btndetvmed.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btndetvmed.Location = New System.Drawing.Point(734, 341)
+        Me.btndetvmed.Name = "btndetvmed"
+        Me.btndetvmed.Size = New System.Drawing.Size(118, 27)
+        Me.btndetvmed.TabIndex = 2
+        Me.btndetvmed.Text = "AGREGAR..."
+        Me.btndetvmed.UseVisualStyleBackColor = False
+        '
+        'DataMedi
+        '
+        Me.DataMedi.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataMedi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataMedi.Location = New System.Drawing.Point(342, 40)
+        Me.DataMedi.Name = "DataMedi"
+        Me.DataMedi.RowHeadersWidth = 62
+        Me.DataMedi.Size = New System.Drawing.Size(653, 294)
+        Me.DataMedi.TabIndex = 3
         '
         'NewVenta
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1484, 822)
+        Me.ClientSize = New System.Drawing.Size(1006, 526)
+        Me.Controls.Add(Me.DataMedi)
+        Me.Controls.Add(Me.btndetvmed)
+        Me.Controls.Add(Me.btnre9)
+        Me.Controls.Add(Me.btnre)
+        Me.Controls.Add(Me.addProd)
+        Me.Controls.Add(Me.BTNEREVTA)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.DataProd)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.data2)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.panelTotal)
         Me.Controls.Add(Me.cvvta)
         Me.Controls.Add(Me.Label5)
@@ -577,13 +540,9 @@ Partial Class NewVenta
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.data1)
-        Me.Controls.Add(Me.Panel3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "NewVenta"
         Me.Text = "AgregarVentas"
-        Me.Panel3.ResumeLayout(False)
-        CType(Me.DataMedi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MEDICAMENTOSBindingSource5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FarmSAntonioVentasDataVTAMED, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MEDICAMENTOSBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -592,7 +551,6 @@ Partial Class NewVenta
         CType(Me.FarmSAntonioDataSet13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MEDICAMENTOSBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MEDICAMENTOSBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
         CType(Me.DataProd, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PRODUCTOSBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FarmSAntonioVentasDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -608,18 +566,15 @@ Partial Class NewVenta
         CType(Me.PRODUCTOSBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.DataMedi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents DataProd As DataGridView
     Friend WithEvents PRODUCTOSBindingSource As BindingSource
     Friend WithEvents addProd As Button
     Friend WithEvents btnre As Button
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents btndetvmed As Button
-    Friend WithEvents btnre9 As Button
     Friend WithEvents DataMed As DataGridView
     Friend WithEvents MEDICAMENTOSBindingSource As BindingSource
     Friend WithEvents MEDICAMENTOSBindingSource1 As BindingSource
@@ -636,7 +591,6 @@ Partial Class NewVenta
     Friend WithEvents PRECIOVTAMDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EXISTENCIASMDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ESTADODataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataMedi As DataGridView
     Friend WithEvents MEDICAMENTOSBindingSource2 As BindingSource
     Friend WithEvents data2 As DataGridView
     Friend WithEvents panelTotal As Panel
@@ -681,4 +635,8 @@ Partial Class NewVenta
     Friend WithEvents ctpag As ComboBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents BTNEREVTA As Button
+    Friend WithEvents btnre9 As Button
+    Friend WithEvents btndetvmed As Button
+    Friend WithEvents DataMedi As DataGridView
 End Class

@@ -33,7 +33,7 @@
         conexion = New ADODB.Connection
         With conexion
             .Provider = "sqloledb"
-            .ConnectionString = "INITIAL CATALOG=FarmSAntonio;SERVER=DESKTOP-0GQC4OM\SQLEXPRESS;INTEGRATED SECURITY=SSPI;PERSIST SECURITY INFO=TRUE"
+            .ConnectionString = "INITIAL CATALOG=FarmSAntonio;SERVER=DESKTOP-7P5KUCB\SQLEXPRESS;INTEGRATED SECURITY=SSPI;PERSIST SECURITY INFO=TRUE"
 
             Try
                 .Open()
@@ -52,7 +52,7 @@
         conexionc = New ADODB.Connection
         With conexionc
             .Provider = "sqloledb"
-            .ConnectionString = "INITIAL CATALOG=FarmSAntonioCompras;SERVER=DESKTOP-0GQC4OM\SQLEXPRESS;INTEGRATED SECURITY=SSPI;PERSIST SECURITY INFO=TRUE"
+            .ConnectionString = "INITIAL CATALOG=FarmSAntonioCompras;SERVER=DESKTOP-7P5KUCB\SQLEXPRESS;INTEGRATED SECURITY=SSPI;PERSIST SECURITY INFO=TRUE"
             Try
                 .Open()
                 'MessageBox.Show("Conexión Compras")
@@ -68,7 +68,7 @@
         conexionv = New ADODB.Connection
         With conexionv
             .Provider = "sqloledb"
-            .ConnectionString = "INITIAL CATALOG=FarmSAntonioVentas;SERVER=DESKTOP-0GQC4OM\SQLEXPRESS;INTEGRATED SECURITY=SSPI;PERSIST SECURITY INFO=TRUE"
+            .ConnectionString = "INITIAL CATALOG=FarmSAntonioVentas;SERVER=DESKTOP-7P5KUCB\SQLEXPRESS;INTEGRATED SECURITY=SSPI;PERSIST SECURITY INFO=TRUE"
             Try
                 .Open()
                 'MessageBox.Show("Conexión Ventas")

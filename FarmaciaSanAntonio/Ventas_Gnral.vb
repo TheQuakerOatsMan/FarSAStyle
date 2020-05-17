@@ -51,11 +51,23 @@ Public Class Ventas_Gnral
                         If ban.Value = 5 Then
                             MsgBox("ESTA VENTA NO SE ENCUENTRA REGISTRADA")
                         Else
-                            If ban.Value = 6 Then
-                                MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                            If ban.Value = 50 Then
+                                MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
                             Else
-                                MsgBox("TIPO DE PAGO ACTUALIZADO")
+                                If ban.Value = 51 Then
+                                    MsgBox("EL USUARIO NO EXISTE")
+                                Else
+                                    If ban.Value = 52 Then
+                                        MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                    Else
+                                        If ban.Value = 53 Then
+                                            MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                        Else
+                                            MsgBox("TIPO DE PAGO ACTUALIZADO")
 
+                                        End If
+                                    End If
+                                End If
                             End If
                         End If
                     End If
@@ -161,9 +173,25 @@ Public Class Ventas_Gnral
                     If ban.Value = 2 Then
                         MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
                     Else
-                        MsgBox("DETALLE ELIMINADO CON EXITO :D")
-                        'AÑADIR LOS CAMPOS QUE FALTAN'
-                        llenar_data()
+                        If ban.Value = 50 Then
+                            MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
+                        Else
+                            If ban.Value = 51 Then
+                                MsgBox("EL USUARIO NO EXISTE")
+                            Else
+                                If ban.Value = 52 Then
+                                    MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                Else
+                                    If ban.Value = 53 Then
+                                        MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                    Else
+                                        MsgBox("DETALLE ELIMINADO CON EXITO :D")
+                                        'AÑADIR LOS CAMPOS QUE FALTAN'
+                                        llenar_data()
+                                    End If
+                                End If
+                            End If
+                        End If
                     End If
                 End If
             End If
@@ -210,14 +238,29 @@ Public Class Ventas_Gnral
             Else
                 If ban.Value = 3 Then
                     MsgBox("PRODUCTO INEXISTENTE")
-
                 Else
                     If ban.Value = 2 Then
                         MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
                     Else
-                        MsgBox("DETALLE ELIMINADO CON EXITO :D")
-                        'AÑADIR LOS CAMPOS QUE FALTAN'
-                        llenar_data2()
+                        If ban.Value = 50 Then
+                            MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
+                        Else
+                            If ban.Value = 51 Then
+                                MsgBox("EL USUARIO NO EXISTE")
+                            Else
+                                If ban.Value = 52 Then
+                                    MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                Else
+                                    If ban.Value = 53 Then
+                                        MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                    Else
+                                        MsgBox("DETALLE ELIMINADO CON EXITO :D")
+                                        'AÑADIR LOS CAMPOS QUE FALTAN'
+                                        llenar_data2()
+                                    End If
+                                End If
+                            End If
+                        End If
                     End If
                 End If
             End If
@@ -258,8 +301,24 @@ Public Class Ventas_Gnral
                     If ban.Value = 4 Then
                         MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
                     Else
-                        MsgBox("VENTA CANCELADA")
-                        'AÑADIR LOS CAMPOS QUE FALTAN'
+                        If ban.Value = 50 Then
+                            MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
+                        Else
+                            If ban.Value = 51 Then
+                                MsgBox("EL USUARIO NO EXISTE")
+                            Else
+                                If ban.Value = 52 Then
+                                    MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                Else
+                                    If ban.Value = 53 Then
+                                        MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                    Else
+                                        MsgBox("VENTA CANCELADA")
+                                        'AÑADIR LOS CAMPOS QUE FALTAN'
+                                    End If
+                                End If
+                            End If
+                        End If
                     End If
                 End If
             End If

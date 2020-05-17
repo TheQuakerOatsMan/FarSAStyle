@@ -60,6 +60,7 @@
             CORREOEMP.Enabled = False
             EDADEMP.Enabled = False
             PUESTO.Enabled = False
+            DEPTO.Enabled = False
         End If
         If valor = 6 Then
             PUESTO.Enabled = False
@@ -179,11 +180,23 @@
                                     If ban.Value = 7 Then
                                         MsgBox("EL USUARIO INGRESADO TIENE UNA SESION INICIADA, CIERRE ESA SESION PARA TERMINAR")
                                     Else
-                                        If ban.Value = 8 Then
-                                            MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                        If ban.Value = 50 Then
+                                            MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
                                         Else
-                                            MsgBox("NOMBRE MODIFICADO")
-                                            NOMEMP.Enabled = False
+                                            If ban.Value = 51 Then
+                                                MsgBox("EL USUARIO NO EXISTE")
+                                            Else
+                                                If ban.Value = 52 Then
+                                                    MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                                Else
+                                                    If ban.Value = 53 Then
+                                                        MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                                    Else
+                                                        MsgBox("NOMBRE MODIFICADO")
+                                                        NOMEMP.Enabled = False
+                                                    End If
+                                                End If
+                                            End If
                                         End If
                                     End If
                                 End If
@@ -192,7 +205,6 @@
                     End If
                 End If
             End If
-
         End If
         If valor = 6 Then
             With comanV
@@ -223,13 +235,25 @@
                             If ban.Value = 5 Then
                                 MsgBox("EL EMPLEADO NO EXISTE")
                             Else
-                                If ban.Value = 6 Then
-                                    MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                If ban.Value = 50 Then
+                                    MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
                                 Else
-                                    MsgBox("PUESTO MODIFICADO")
-                                PUESTO.Enabled = False
+                                    If ban.Value = 51 Then
+                                        MsgBox("EL USUARIO NO EXISTE")
+                                    Else
+                                        If ban.Value = 52 Then
+                                            MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                        Else
+                                            If ban.Value = 53 Then
+                                                MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                            Else
+                                                MsgBox("PUESTO MODIFICADO")
+                                                PUESTO.Enabled = False
+                                            End If
+                                        End If
+                                    End If
+                                End If
                             End If
-End If 
                         End If
                     End If
                 End If
@@ -264,8 +288,24 @@ End If
                             If ban.Value = 5 Then
                                 MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
                             Else
-                                MsgBox("EDAD MODIFICADA")
-                                EDADEMP.Enabled = False
+                                If ban.Value = 50 Then
+                                    MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
+                                Else
+                                    If ban.Value = 51 Then
+                                        MsgBox("EL USUARIO NO EXISTE")
+                                    Else
+                                        If ban.Value = 52 Then
+                                            MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                        Else
+                                            If ban.Value = 53 Then
+                                                MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                            Else
+                                                MsgBox("EDAD MODIFICADA")
+                                                EDADEMP.Enabled = False
+                                            End If
+                                        End If
+                                    End If
+                                End If
                             End If
                         End If
                     End If
@@ -298,11 +338,23 @@ End If
                         If ban.Value = 4 Then
                             MsgBox("EL EMPLEADO NO EXISTE")
                         Else
-                            If ban.Value = 5 Then
-                                MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                            If ban.Value = 50 Then
+                                MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
                             Else
-                                MsgBox("TELEFONO MODIFICADO")
-                                TELEMP.Enabled = False
+                                If ban.Value = 51 Then
+                                    MsgBox("EL USUARIO NO EXISTE")
+                                Else
+                                    If ban.Value = 52 Then
+                                        MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                    Else
+                                        If ban.Value = 53 Then
+                                            MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                        Else
+                                            MsgBox("TELEFONO MODIFICADO")
+                                            TELEMP.Enabled = False
+                                        End If
+                                    End If
+                                End If
                             End If
                         End If
                     End If
@@ -392,17 +444,29 @@ End If
                                                                                             If ban.Value = 27 Then
                                                                                                 MsgBox("EL DEPTO NO CONCUERDA CON EL PUESTO")
                                                                                             Else
-                                                                                                If ban.Value = 26 Then
-                                                                                                    MsgBox("EL USUARIO NO TIENE UNA SESION INICIADA, CIERRE ESA SESION PARA TERMINAR")
+                                                                                                If ban.Value = 50 Then
+                                                                                                    MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
                                                                                                 Else
-                                                                                                    MsgBox("EMPLEADO ACTUALIZADO")
-                                                                                                    NOMEMP.Enabled = False
-                                                                                                    DIREMP.Enabled = False
-                                                                                                    TELEMP.Enabled = False
-                                                                                                    CORREOEMP.Enabled = False
-                                                                                                    EDADEMP.Enabled = False
-                                                                                                    PUESTO.Enabled = False
-                                                                                                    DEPTO.Enabled = False
+                                                                                                    If ban.Value = 51 Then
+                                                                                                        MsgBox("EL USUARIO NO EXISTE")
+                                                                                                    Else
+                                                                                                        If ban.Value = 52 Then
+                                                                                                            MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                                                                                        Else
+                                                                                                            If ban.Value = 53 Then
+                                                                                                                MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                                                                                            Else
+                                                                                                                MsgBox("EMPLEADO ACTUALIZADO")
+                                                                                                                NOMEMP.Enabled = False
+                                                                                                                DIREMP.Enabled = False
+                                                                                                                TELEMP.Enabled = False
+                                                                                                                CORREOEMP.Enabled = False
+                                                                                                                EDADEMP.Enabled = False
+                                                                                                                PUESTO.Enabled = False
+                                                                                                                DEPTO.Enabled = False
+                                                                                                            End If
+                                                                                                        End If
+                                                                                                    End If
                                                                                                 End If
                                                                                             End If
                                                                                         End If
@@ -410,11 +474,9 @@ End If
                                                                                 End If
                                                                             End If
                                                                         End If
-
                                                                     End If
                                                                 End If
                                                             End If
-
                                                         End If
                                                     End If
                                                 End If

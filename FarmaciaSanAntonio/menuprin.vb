@@ -271,7 +271,14 @@
     Private Sub AgregarVentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarVentaToolStripMenuItem.Click
         'esto fue lo que cambie'
         ''confirmEmp.Show()
-
+        Dim cveemp As Integer
+        consulta3 = conexionv.Execute("select * from empleados where cvemp=" & claveUser)
+        If Not consulta3.EOF Then
+            cveemp = consulta3.Fields(0).Value
+            Name = consulta3.Fields(1).Value
+        Else
+            MsgBox("La cve del empleado esta vacia o el empleado esta dado de baja")
+        End If
         ban = New ADODB.Parameter
         Dim clave As Integer
         clave = 100
@@ -306,27 +313,50 @@
                             If ban.Value = 6 Then
                                 MsgBox("LAS VENTAS SOLO PUEDEN SER COBRADAs (REALIZADAS) POR LOS CAJEROS, ADMINSITRADORES O ENCARGADOS DE TIENDA")
                             Else
-                                If ban.Value = 7 Then
-                                    MsgBox("USTED NO HA INICADO SESION, INICIELA")
+                                If ban.Value = 50 Then
+                                    MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
                                 Else
-                                    consql = ("select max(cvevta) from ventas")
-                                    consultaV = New ADODB.Recordset
-                                    consultaV = conexionv.Execute(consql)
-                                    If Not consultaV.EOF Then
-                                        clave = consultaV.Fields(0).Value
+                                    If ban.Value = 51 Then
+                                        MsgBox("EL USUARIO NO EXISTE")
+                                    Else
+                                        If ban.Value = 52 Then
+                                            MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                        Else
+                                            If ban.Value = 53 Then
+                                                MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                            Else
+
+                                                consql = ("select max(cvevta) from ventas")
+                                                consultaV = New ADODB.Recordset
+                                                consultaV = conexionv.Execute(consql)
+                                                If Not consultaV.EOF Then
+                                                    clave = consultaV.Fields(0).Value
+                                                End If
+                                                MsgBox("MODULO DE VENTAS")
+                                                NewVenta.ctNEmp.Text = Name
+                                                NewVenta.ctNEmp.Enabled = False
+                                                NewVenta.ctemp.Text = cveemp
+                                                NewVenta.ctemp.Enabled = False
+                                                NewVenta.ctpag.Enabled = True
+                                                NewVenta.cvvta.Text = clave
+                                                If depa = "GERENCIA" Then
+                                                    NewVenta.BTNEREVTA.Visible = False
+                                                    NewVenta.btnCancel.Visible = True
+                                                Else
+                                                    If depa = "VENTAS" Then
+                                                        NewVenta.BTNEREVTA.Visible = True
+                                                        NewVenta.btnCancel.Visible = False
+                                                    End If
+                                                End If
+                                                'AGREGUE ESTAS DOS'
+                                                NewVenta.tpago = "EFECTIVO" 'este seria el valor por defecto'
+                                                NewVenta.ctpag.Text = "EFECTIVO"
+                                                clave = 0
+                                                NewVenta.Show()
+                                                Close()
+                                            End If
+                                        End If
                                     End If
-                                    MsgBox("MODULO DE VENTAS")
-                                    NewVenta.ctNEmp.Text = Name
-                                    NewVenta.ctNEmp.Enabled = False
-                                    NewVenta.ctemp.Enabled = False
-                                    NewVenta.ctpag.Enabled = True
-                                    NewVenta.cvvta.Text = clave
-                                    'AGREGUE ESTAS DOS'
-                                    NewVenta.tpago = "EFECTIVO" 'este seria el valor por defecto'
-                                    NewVenta.ctpag.Text = "EFECTIVO"
-                                    clave = 0
-                                    NewVenta.Show()
-                                    Close()
                                 End If
                             End If
                         End If
@@ -348,7 +378,7 @@
         modEmpleados.salirME.Visible = True
         modEmpleados.btnre2.Visible = False
         modEmpleados.valor = 2
-        modEmpleados.moT.Enabled = True
+        modEmpleados.moT.Enabled = False
         modEmpleados.btncan.Enabled = False
         modEmpleados.btnApli.Enabled = False
         modEmpleados.modN.Enabled = False
@@ -388,4 +418,11 @@
         Compras_Gnral.elimP.Enabled = False
     End Sub
 
+    Private Sub MEDICAMENTOSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MEDICAMENTOSToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub CADUCIDADToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CADUCIDADToolStripMenuItem.Click
+
+    End Sub
 End Class

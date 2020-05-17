@@ -7,22 +7,20 @@
         'ESTO SE AGREGO NUEVO'
         clavevta = Val(cvvta.Text)
         'YA LO DE AQUI ES DEL DATAGRID'
-        'consultaV = New ADODB.Recordset
-        'consultaV.Open("select * from MEDICAMENTOS order by CVEMED", modulo.conexionv)
-        'Dim ODA As New OleDb.OleDbDataAdapter
-        'Dim tb As New DataTable
-        'Dim ds As New DataSet
-        'ODA.Fill(ds, modulo.consultaV, "Table1")
-        ' DataMed.DataSource = ds.Tables("Table1").DefaultView
-        'consultaV2 = New ADODB.Recordset
-        'consultaV2.Open("select * from PRODUCTOS order by CVEPROD", modulo.conexionv)
-        'Dim ODA2 As New OleDb.OleDbDataAdapter
-        'Dim tb2 As New DataTable
-        'Dim ds2 As New DataSet
-        'ODA2.Fill(ds2, modulo.consultaV2, "Table1")
-        'DataProd.DataSource = ds2.Tables("Table1").DefaultView'
-
-
+        cargadaprod()
+        cargadamed()
+        DataMedi.Enabled = False
+        DataMedi.Visible = False
+        DataProd.Enabled = False
+        DataProd.Visible = False
+        addProd.Enabled = False
+        addProd.Visible = False
+        btnre.Enabled = False
+        btnre.Visible = False
+        btnre9.Enabled = False
+        btnre9.Visible = False
+        btndetvmed.Enabled = False
+        btndetvmed.Visible = False
         confirmEmp.Enabled = False
         confirmEmp.Visible = False
         consulta2 = New ADODB.Recordset
@@ -58,7 +56,7 @@
         ODA.Fill(ds2, modulo.consulta3, "Table1")
         data2.DataSource = ds2.Tables("Table1").DefaultView
     End Sub
-    Public Sub cagadamed()
+    Public Sub cargadamed()
         consultaV = New ADODB.Recordset
         consultaV.Open("select * from MEDICAMENTOS order by CVEMED", modulo.conexionv)
         Dim ODA As New OleDb.OleDbDataAdapter
@@ -73,10 +71,12 @@
         Dim ODA2 As New OleDb.OleDbDataAdapter
         Dim tb2 As New DataTable
         Dim ds2 As New DataSet
-        ODA2.Fill(ds2, modulo.consultaV, "Table1")
+        ODA2.Fill(ds2, modulo.consultaV2, "Table1")
         DataProd.DataSource = ds2.Tables("Table1").DefaultView
     End Sub
     Public Sub actualizardatos()
+        cargadamed()
+        cargadaprod()
         Dim iva1 As Integer
         Dim sub1 As Integer
         consulta5 = New ADODB.Recordset
@@ -111,6 +111,7 @@
                 frm.cantvp.Items.Add(num)
                 num = num + 1
             End While
+
             frm.cventa = Val(cvvta.Text)
             frm.ShowDialog()
         Else
@@ -119,12 +120,22 @@
     End Sub
 
     Private Sub btnre_Click(sender As Object, e As EventArgs) Handles btnre.Click
-        Panel2.Visible = False
+        DataProd.Enabled = False
+        DataProd.Visible = False
+        btnre.Enabled = False
+        btnre.Visible = False
+        addProd.Enabled = False
+        addProd.Visible = False
         habilita()
     End Sub
 
     Private Sub btnre9_Click(sender As Object, e As EventArgs) Handles btnre9.Click
-        Panel3.Visible = False
+        DataMedi.Enabled = False
+        DataMedi.Visible = False
+        btnre9.Enabled = False
+        btnre9.Visible = False
+        detvmed.Enabled = False
+        detvmed.Visible = False
         habilita()
     End Sub
 
@@ -143,6 +154,7 @@
                 frm.cantvm.Items.Add(num)
                 num = num + 1
             End While
+
             frm.cventa = Val(cvvta.Text)
             frm.ShowDialog()
         Else
@@ -158,6 +170,7 @@
     End Sub
 
     Public Sub habilita()
+        BTNEREVTA.Enabled = True
         cvvta.Enabled = False
         Label1.Enabled = True
         Label2.Enabled = True
@@ -171,6 +184,7 @@
         ctpag.Enabled = True 'pa que cambie'
     End Sub
     Public Sub deshabilita()
+        BTNEREVTA.Enabled = False
         cvvta.Enabled = False
         Label1.Enabled = False
         Label2.Enabled = False
@@ -185,27 +199,22 @@
     End Sub
 
     Private Sub btnadd_Click_1(sender As Object, e As EventArgs) Handles btnadd.Click
-        Panel2.Visible = True
-        consultaV2 = New ADODB.Recordset
-        consultaV2.Open("select * from PRODUCTOS order by CVEPROD", modulo.conexionv)
-        Dim ODA2 As New OleDb.OleDbDataAdapter
-        Dim tb2 As New DataTable
-        Dim ds2 As New DataSet
-        ODA2.Fill(ds2, modulo.consultaV2, "Table1")
-        DataProd.DataSource = ds2.Tables("Table1").DefaultView
+        DataProd.Enabled = True
+        DataProd.Visible = True
+        addProd.Enabled = True
+        addProd.Visible = True
+        btnre.Enabled = True
+        btnre.Visible = True
         deshabilita()
     End Sub
 
     Private Sub addm_Click_1(sender As Object, e As EventArgs) Handles addm.Click
-
-        Panel3.Visible = True
-        consultaV = New ADODB.Recordset
-        consultaV.Open("select * from MEDICAMENTOS order by CVEMED", modulo.conexionv)
-        Dim ODA As New OleDb.OleDbDataAdapter
-        Dim tb As New DataTable
-        Dim ds As New DataSet
-        ODA.Fill(ds, modulo.consultaV, "Table1")
-        DataMedi.DataSource = ds.Tables("Table1").DefaultView
+        DataMedi.Enabled = True
+        DataMedi.Visible = True
+        btndetvmed.Enabled = True
+        btndetvmed.Visible = True
+        btnre9.Enabled = True
+        btnre9.Visible = True
         deshabilita()
     End Sub
 
@@ -233,15 +242,27 @@
                 If ban.Value = 3 Then
                     MsgBox("NO SE PUEDE BORRAR LA VENTA")
                 Else
-                    If ban.Value = 4 Then
-                        MsgBox("SESION NO INICIADA")
+                    If ban.Value = 50 Then
+                        MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
                     Else
-                        MsgBox("VENTA CANCELADA")
-                        menuprin.Enabled = True
-                        menuprin.Visible = True
-                        Close()
-                        'AÑADIR LOS CAMPOS QUE FALTAN'
+                        If ban.Value = 51 Then
+                            MsgBox("EL USUARIO NO EXISTE")
+                        Else
+                            If ban.Value = 52 Then
+                                MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                            Else
+                                If ban.Value = 53 Then
+                                    MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                Else
+                                    MsgBox("VENTA CANCELADA")
+                                    menuprin.Enabled = True
+                                    menuprin.Visible = True
+                                    Close()
+                                    'AÑADIR LOS CAMPOS QUE FALTAN'
 
+                                End If
+                            End If
+                        End If
                     End If
                 End If
             End If
@@ -253,9 +274,7 @@
         'ESTA PARTE LA CHECAS SI LA DEJAMOS ASI O NO, LO QUE PASA ES QUE PODRIA QUEDAR ASI POR SI LA DOÑA LAHACE DE PEDO POR QUE NO
         '"ES FUNCIONAL" Y ASI ENTONCES POR ESO LO MODIFICQUE'
 
-        If (ctpag.SelectedItem = 0) Then
-            MsgBox("La cve del la venta es: " & clavevta & " INSERCION CORRECTA")
-        Else
+        If ctpag.SelectedItem IsNot Nothing Then
             If (tpago = ctpag.SelectedItem.ToString) Then 'AQUI ME DICE SI SE QUEDO EN EFECTIVO O NEL'
                 MsgBox("La cve del la venta es: " & clavevta & " INSERCION CORRECTA")
             Else
@@ -289,11 +308,23 @@
                                 If ban.Value = 5 Then
                                     MsgBox("ESTA VENTA NO SE ENCUENTRA REGISTRADA")
                                 Else
-                                    If ban.Value = 6 Then
-                                        MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                    If ban.Value = 50 Then
+                                        MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
                                     Else
-                                        MsgBox("TIPO DE PAGO ACTUALIZADO")
+                                        If ban.Value = 51 Then
+                                            MsgBox("EL USUARIO NO EXISTE")
+                                        Else
+                                            If ban.Value = 52 Then
+                                                MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                            Else
+                                                If ban.Value = 53 Then
+                                                    MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                                Else
+                                                    MsgBox("TIPO DE PAGO ACTUALIZADO")
 
+                                                End If
+                                            End If
+                                        End If
                                     End If
                                 End If
                             End If
@@ -302,7 +333,6 @@
                 End If
                 MsgBox("La cve del la venta es: " & clavevta & " INSERCION CORRECTA")
             End If
-
         End If
         MessageBox.Show("VENTA REALIZADA CON EXITO")
 
@@ -314,5 +344,12 @@
         Close()
     End Sub
 
-
+    Private Sub BTNEREVTA_Click(sender As Object, e As EventArgs) Handles BTNEREVTA.Click
+        MsgBox("La cve del la venta es: " & clavevta & " INSERCION CORRECTA")
+        MessageBox.Show("HABLE CON EL ENCARGADO O GERENTE PARA ELIMINAR ESTA VENTA, EN DADO CASO DE QUE NO \n
+        SE HAYA EFECTUADO DE MANERA CORRECTA")
+        menuprin.Enabled = True
+        menuprin.Visible = True
+        Close()
+    End Sub
 End Class

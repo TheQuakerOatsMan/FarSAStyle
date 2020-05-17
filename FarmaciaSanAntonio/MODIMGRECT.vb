@@ -44,11 +44,27 @@
                                 If ban.Value = 7 Then
                                     MsgBox("ESTE DETALLE YA CUENTA CON LA MISMA INFO")
                                 Else
-                                    MsgBox("DETALLE MODIFICADO CON EXITO :D")
-                                    'AÑADIR LOS CAMPOS QUE FALTAN'
-                                    Ventas_Gnral.llenar_data()
-                                    Close()
-                                    Ventas_Gnral.Enabled = True
+                                    If ban.Value = 50 Then
+                                        MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
+                                    Else
+                                        If ban.Value = 51 Then
+                                            MsgBox("EL USUARIO NO EXISTE")
+                                        Else
+                                            If ban.Value = 52 Then
+                                                MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+                                            Else
+                                                If ban.Value = 53 Then
+                                                    MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+                                                Else
+                                                    MsgBox("DETALLE MODIFICADO CON EXITO :D")
+                                                    'AÑADIR LOS CAMPOS QUE FALTAN'
+                                                    Ventas_Gnral.llenar_data()
+                                                    Close()
+                                                    Ventas_Gnral.Enabled = True
+                                                End If
+                                            End If
+                                        End If
+                                    End If
                                 End If
                             End If
                         End If
@@ -56,7 +72,6 @@
                 End If
             End If
         End If
-
     End Sub
 
     Private Sub btnre1_Click(sender As Object, e As EventArgs) Handles btnre1.Click

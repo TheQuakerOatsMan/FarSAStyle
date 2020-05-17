@@ -5,7 +5,12 @@
     End Sub
 
     Private Sub btnre8_Click(sender As Object, e As EventArgs) Handles btnre8.Click
-        NewVenta.Panel2.Enabled = True
+        NewVenta.DataProd.Enabled = True
+        NewVenta.DataProd.Visible = True
+        NewVenta.addProd.Enabled = True
+        NewVenta.addProd.Visible = True
+        NewVenta.btnre.Enabled = True
+        NewVenta.btnre.Visible = True
         Close()
     End Sub
 
@@ -57,7 +62,6 @@
                                             MsgBox("DETALLE EXITOSO")
                                             'AÑADIR LOS CAMPOS QUE FALTAN'
                                             cantvp.SelectedText = ""
-                                            NewVenta.Panel2.Enabled = True
                                             ''NewVenta.cargadaprod()
                                             NewVenta.actualizardatos()
                                             NewVenta.cargadatos()
