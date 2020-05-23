@@ -21,6 +21,7 @@
     Public comanC4 As ADODB.Command 'comando de compras'
     Public comanC5 As ADODB.Command 'comando de compras'
     Public comanV As ADODB.Command 'comando de ventas'
+    Public comanV2 As ADODB.Command 'comando de ventas'
     Public conexion As ADODB.Connection 'INTERFAZ DE CONEXION DE VISUAL A SQL'
     Public conexionc As ADODB.Connection 'INTERFAZ DE CONEXION DE VISUAL A SQL compras'
     Public conexionv As ADODB.Connection 'INTERFAZ DE CONEXION DE VISUAL A SQL ventas'

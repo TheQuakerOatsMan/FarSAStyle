@@ -214,9 +214,10 @@ Partial Class NewVenta
         Me.panelTotal.Controls.Add(Me.Label4)
         Me.panelTotal.Controls.Add(Me.Label3)
         Me.panelTotal.Controls.Add(Me.totalvta)
+        Me.panelTotal.Controls.Add(Me.btnCancel)
         Me.panelTotal.Location = New System.Drawing.Point(16, 155)
         Me.panelTotal.Name = "panelTotal"
-        Me.panelTotal.Size = New System.Drawing.Size(267, 213)
+        Me.panelTotal.Size = New System.Drawing.Size(267, 230)
         Me.panelTotal.TabIndex = 33
         '
         'ctpag
@@ -268,7 +269,7 @@ Partial Class NewVenta
         Me.btnCoVta.AutoEllipsis = True
         Me.btnCoVta.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnCoVta.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.btnCoVta.Location = New System.Drawing.Point(52, 157)
+        Me.btnCoVta.Location = New System.Drawing.Point(56, 146)
         Me.btnCoVta.Name = "btnCoVta"
         Me.btnCoVta.Size = New System.Drawing.Size(157, 33)
         Me.btnCoVta.TabIndex = 17
@@ -359,9 +360,9 @@ Partial Class NewVenta
         '
         Me.btnCancel.BackColor = System.Drawing.Color.Navy
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnCancel.Location = New System.Drawing.Point(16, 469)
+        Me.btnCancel.Location = New System.Drawing.Point(56, 186)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(151, 33)
+        Me.btnCancel.Size = New System.Drawing.Size(157, 33)
         Me.btnCancel.TabIndex = 26
         Me.btnCancel.Text = "CANCELAR VENTA"
         Me.btnCancel.UseVisualStyleBackColor = False
@@ -474,11 +475,11 @@ Partial Class NewVenta
         '
         Me.BTNEREVTA.BackColor = System.Drawing.Color.Navy
         Me.BTNEREVTA.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.BTNEREVTA.Location = New System.Drawing.Point(16, 483)
+        Me.BTNEREVTA.Location = New System.Drawing.Point(11, 469)
         Me.BTNEREVTA.Name = "BTNEREVTA"
         Me.BTNEREVTA.Size = New System.Drawing.Size(175, 33)
         Me.BTNEREVTA.TabIndex = 85
-        Me.BTNEREVTA.Text = "CANCELAR Y REGRESAR >>"
+        Me.BTNEREVTA.Text = "REGRESAR AL MENU >>"
         Me.BTNEREVTA.UseVisualStyleBackColor = False
         '
         'btnre9
@@ -536,7 +537,6 @@ Partial Class NewVenta
         Me.Controls.Add(Me.ctemp)
         Me.Controls.Add(Me.addm)
         Me.Controls.Add(Me.btnadd)
-        Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.data1)

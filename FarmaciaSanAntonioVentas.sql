@@ -113,7 +113,9 @@ finalizasesion 'EL PODER x',0
 finalizasesion 'ELPODER3',0
 SELECT * FROM DETCOMPRV
 SELECT * FROM COMPRAS
-select * from usuarios 
+select * from usuarios
+SELECT * FROM VENTAS
+select * from detvtamed
 select cvemp from usuarios where nusuario='EL PODER X' AND contrasena ='1234'
 SELECT * FROM USUARIOS
 

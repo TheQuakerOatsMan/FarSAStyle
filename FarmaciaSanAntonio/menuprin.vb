@@ -279,91 +279,110 @@
         Else
             MsgBox("La cve del empleado esta vacia o el empleado esta dado de baja")
         End If
-        ban = New ADODB.Parameter
-        Dim clave As Integer
-        clave = 100
-        comanV = New ADODB.Command
-        With comanV
-            .CommandText = "VTAUTO"
-            .CommandType = CommandType.StoredProcedure
-            '.Parameters.Append(.CreateParameter("0", DataTypeEnum.adInteger, ParameterDirectionEnum.adParamInput, , Val(CVEPROV.Text))) ' sirve para un entero decimal o money para el tipo de dato fecha se busca como date y para el tipo de dato money se busca como currency'
-            .Parameters.Append(.CreateParameter("0", DataTypeEnum.adVarChar, ParameterDirectionEnum.adParamInput, 20, "EFECTIVO")) 'si te fijas puse efectivo por default, paraque pueda corrrer el poc'
-            .Parameters.Append(.CreateParameter("1", DataTypeEnum.adInteger, ParameterDirectionEnum.adParamInput, , claveUser))
-            .Parameters.Append(.CreateParameter("2", DataTypeEnum.adInteger, ParameterDirectionEnum.adParamOutput, , 0)) 'BANDERA val(nombredelcampo.Text)'
-            .ActiveConnection = conexionv
-            .Execute()
-            ban.Value = .Parameters(2).Value
+        'ban = New ADODB.Parameter
+        'Dim clave As Integer
+        'clave = 100
+        'comanV = New ADODB.Command
+        'With comanV
+        '    .CommandText = "VTAUTO"
+        '    .CommandType = CommandType.StoredProcedure
+        '    '.Parameters.Append(.CreateParameter("0", DataTypeEnum.adInteger, ParameterDirectionEnum.adParamInput, , Val(CVEPROV.Text))) ' sirve para un entero decimal o money para el tipo de dato fecha se busca como date y para el tipo de dato money se busca como currency'
+        '    .Parameters.Append(.CreateParameter("0", DataTypeEnum.adVarChar, ParameterDirectionEnum.adParamInput, 20, "EFECTIVO")) 'si te fijas puse efectivo por default, paraque pueda corrrer el poc'
+        '    .Parameters.Append(.CreateParameter("1", DataTypeEnum.adInteger, ParameterDirectionEnum.adParamInput, , claveUser))
+        '    .Parameters.Append(.CreateParameter("2", DataTypeEnum.adInteger, ParameterDirectionEnum.adParamOutput, , 0)) 'BANDERA val(nombredelcampo.Text)'
+        '    .ActiveConnection = conexionv
+        '    .Execute()
+        '    ban.Value = .Parameters(2).Value
 
-        End With
-        If ban.Value = 1 Then
-            MsgBox("EL TIPO DE PAGO NO DEBE DE ESTAR VACIO")
+        'End With
+        'If ban.Value = 1 Then
+        '    MsgBox("EL TIPO DE PAGO NO DEBE DE ESTAR VACIO")
+        'Else
+        '    If ban.Value = 2 Then
+        '        MsgBox("EL TIPO DE PAGO TIENE NUMEROS")
+        '    Else
+        '        If ban.Value = 3 Then
+        '            MsgBox("LA CVE DEL EMPLEADO ESTA VACIA")
+        '        Else
+        '            If ban.Value = 4 Then
+        '                MsgBox("LA CVE DEL EMPLEADO NO EXISTE")
+        '            Else
+        '                If ban.Value = 5 Then
+        '                    MsgBox("ESTE EMPLEADO SE ENCUENTRA DADO DE BAJA")
+        '                Else
+        '                    If ban.Value = 6 Then
+        '                        MsgBox("LAS VENTAS SOLO PUEDEN SER COBRADAs (REALIZADAS) POR LOS CAJEROS, ADMINSITRADORES O ENCARGADOS DE TIENDA")
+        '                    Else
+        '                        If ban.Value = 50 Then
+        '                            MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
+        '                        Else
+        '                            If ban.Value = 51 Then
+        '                                MsgBox("EL USUARIO NO EXISTE")
+        '                            Else
+        '                                If ban.Value = 52 Then
+        '                                    MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
+        '                                Else
+        '                                    If ban.Value = 53 Then
+        '                                        MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
+        '                                    Else
+
+        '                                        consql = ("select max(cvevta) from ventas")
+        '                                        consultaV = New ADODB.Recordset
+        '                                        consultaV = conexionv.Execute(consql)
+        '                                        If Not consultaV.EOF Then
+        '                                            clave = consultaV.Fields(0).Value
+        '                                        End If
+        '                                        MsgBox("MODULO DE VENTAS")
+        '                                        NewVenta.ctNEmp.Text = Name
+        '                                        NewVenta.ctNEmp.Enabled = False
+        '                                        NewVenta.ctemp.Text = cveemp
+        '                                        NewVenta.ctemp.Enabled = False
+        '                                        NewVenta.ctpag.Enabled = True
+        '                                        NewVenta.cvvta.Text = clave
+        '                                        If depa = "GERENCIA" Then
+        '                                            NewVenta.BTNEREVTA.Visible = False
+        '                                            NewVenta.btnCancel.Visible = True
+        '                                        Else
+        '                                            If depa = "VENTAS" Then
+        '                                                NewVenta.BTNEREVTA.Visible = True
+        '                                                NewVenta.btnCancel.Visible = False
+        '                                            End If
+        '                                        End If
+        '                                        'AGREGUE ESTAS DOS'
+        '                                        NewVenta.tpago = "EFECTIVO" 'este seria el valor por defecto'
+        '                                        NewVenta.ctpag.Text = "EFECTIVO"
+        '                                        clave = 0
+        '                                        NewVenta.Show()
+        '                                        Close()
+        '                                    End If
+        '                                End If
+        '                            End If
+        '                        End If
+        '                    End If
+        '                End If
+        '            End If
+        '        End If
+        '    End If
+        'End If
+        NewVenta.ctNEmp.Text = Name
+        NewVenta.ctNEmp.Enabled = False
+        NewVenta.ctemp.Text = cveemp
+        NewVenta.ctemp.Enabled = False
+        NewVenta.tpago = "EFECTIVO" 'este seria el valor por defecto'
+        NewVenta.ctpag.Text = "EFECTIVO"
+        NewVenta.Show()
+        Close()
+        If depa = "GERENCIA" Then
+            NewVenta.BTNEREVTA.Visible = True
+            NewVenta.btnCancel.Visible = True
         Else
-            If ban.Value = 2 Then
-                MsgBox("EL TIPO DE PAGO TIENE NUMEROS")
-            Else
-                If ban.Value = 3 Then
-                    MsgBox("LA CVE DEL EMPLEADO ESTA VACIA")
-                Else
-                    If ban.Value = 4 Then
-                        MsgBox("LA CVE DEL EMPLEADO NO EXISTE")
-                    Else
-                        If ban.Value = 5 Then
-                            MsgBox("ESTE EMPLEADO SE ENCUENTRA DADO DE BAJA")
-                        Else
-                            If ban.Value = 6 Then
-                                MsgBox("LAS VENTAS SOLO PUEDEN SER COBRADAs (REALIZADAS) POR LOS CAJEROS, ADMINSITRADORES O ENCARGADOS DE TIENDA")
-                            Else
-                                If ban.Value = 50 Then
-                                    MsgBox("LA CLAVE DEL EMPLEADO NO PUEDE ESTA VACIA ")
-                                Else
-                                    If ban.Value = 51 Then
-                                        MsgBox("EL USUARIO NO EXISTE")
-                                    Else
-                                        If ban.Value = 52 Then
-                                            MsgBox("SESION NO INICIADA, INICIE UNA SESION PARA CONTINUAR")
-                                        Else
-                                            If ban.Value = 53 Then
-                                                MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
-                                            Else
-
-                                                consql = ("select max(cvevta) from ventas")
-                                                consultaV = New ADODB.Recordset
-                                                consultaV = conexionv.Execute(consql)
-                                                If Not consultaV.EOF Then
-                                                    clave = consultaV.Fields(0).Value
-                                                End If
-                                                MsgBox("MODULO DE VENTAS")
-                                                NewVenta.ctNEmp.Text = Name
-                                                NewVenta.ctNEmp.Enabled = False
-                                                NewVenta.ctemp.Text = cveemp
-                                                NewVenta.ctemp.Enabled = False
-                                                NewVenta.ctpag.Enabled = True
-                                                NewVenta.cvvta.Text = clave
-                                                If depa = "GERENCIA" Then
-                                                    NewVenta.BTNEREVTA.Visible = False
-                                                    NewVenta.btnCancel.Visible = True
-                                                Else
-                                                    If depa = "VENTAS" Then
-                                                        NewVenta.BTNEREVTA.Visible = True
-                                                        NewVenta.btnCancel.Visible = False
-                                                    End If
-                                                End If
-                                                'AGREGUE ESTAS DOS'
-                                                NewVenta.tpago = "EFECTIVO" 'este seria el valor por defecto'
-                                                NewVenta.ctpag.Text = "EFECTIVO"
-                                                clave = 0
-                                                NewVenta.Show()
-                                                Close()
-                                            End If
-                                        End If
-                                    End If
-                                End If
-                            End If
-                        End If
-                    End If
-                End If
+            If depa = "VENTAS" Then
+                NewVenta.BTNEREVTA.Visible = True
+                NewVenta.btnCancel.Visible = False
             End If
         End If
+        NewVenta.Show()
+        Close()
     End Sub
 
     Private Sub CONSULTASGRALToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CONSULTASGRALToolStripMenuItem.Click
@@ -423,6 +442,10 @@
     End Sub
 
     Private Sub CADUCIDADToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CADUCIDADToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub VENTASToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VENTASToolStripMenuItem.Click
 
     End Sub
 End Class

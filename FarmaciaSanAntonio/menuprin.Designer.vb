@@ -206,19 +206,19 @@ Partial Class menuprin
         'AgregarVentaToolStripMenuItem
         '
         Me.AgregarVentaToolStripMenuItem.Name = "AgregarVentaToolStripMenuItem"
-        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AgregarVentaToolStripMenuItem.Text = "Agregar Venta"
         '
         'TodasLasVentasToolStripMenuItem
         '
         Me.TodasLasVentasToolStripMenuItem.Name = "TodasLasVentasToolStripMenuItem"
-        Me.TodasLasVentasToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.TodasLasVentasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.TodasLasVentasToolStripMenuItem.Text = "Consulta ventas"
         '
         'TodasLasVentasToolStripMenuItem1
         '
         Me.TodasLasVentasToolStripMenuItem1.Name = "TodasLasVentasToolStripMenuItem1"
-        Me.TodasLasVentasToolStripMenuItem1.Size = New System.Drawing.Size(158, 22)
+        Me.TodasLasVentasToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.TodasLasVentasToolStripMenuItem1.Text = "Todas las ventas"
         '
         'MEDICAMENTOSToolStripMenuItem
@@ -260,7 +260,7 @@ Partial Class menuprin
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(660, 42)
         Me.Panel1.TabIndex = 84

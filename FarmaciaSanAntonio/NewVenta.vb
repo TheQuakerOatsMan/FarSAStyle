@@ -1,12 +1,18 @@
 ﻿Public Class NewVenta
-    'CREEE ESTAS NUEVAS DOS VARIABLES PARA EL TIPO Y LA CVE'
+    'CREEE ESTAS NUEVAS CUATRO VARIABLES PARA EL TIPO Y LA CVE'
     Friend clavevta As Integer
     Friend tpago As String
-
+    Friend contdetvtamed As New Collection
+    Friend contdetvtaprod As New Collection
+    Dim clave As Integer
+    Friend valida As Integer
     Private Sub AgregarVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        menuprin.Enabled = False
         'ESTO SE AGREGO NUEVO'
         clavevta = Val(cvvta.Text)
         'YA LO DE AQUI ES DEL DATAGRID'
+        contdetvtamed.Clear()
+        contdetvtaprod.Clear()
         cargadaprod()
         cargadamed()
         DataMedi.Enabled = False
@@ -23,21 +29,23 @@
         btndetvmed.Visible = False
         confirmEmp.Enabled = False
         confirmEmp.Visible = False
-        consulta2 = New ADODB.Recordset
-        consulta2 = conexionv.Execute("select * from ventas where cvevta=" & cvvta.Text)
-        If Not consulta2.EOF Then
-            ctpag.Text = consulta2.Fields(3).Value
-            subt.Text = FormatCurrency(consulta2.Fields(1).Value)
-            iva.Text = FormatCurrency(consulta2.Fields(2).Value)
-            totalvta.Text = FormatCurrency(Val(subt.Text) + Val(iva.Text))
-        Else
-            MsgBox("La cve de la venta esta vacia o no se encuentra")
-        End If
+        valida = 0
+        'consulta2 = New ADODB.Recordset
+        'consulta2 = conexionv.Execute("select * from ventas where cvevta=" & cvvta.Text)
+        'If Not consulta2.EOF Then
+        '    ctpag.Text = consulta2.Fields(3).Value
+        '    subt.Text = FormatCurrency(consulta2.Fields(1).Value)
+        '    iva.Text = FormatCurrency(consulta2.Fields(2).Value)
+        '    totalvta.Text = FormatCurrency(Val(subt.Text) + Val(iva.Text))
+        'Else
+        '    MsgBox("La cve de la venta esta vacia o no se encuentra")
+        'End If
         subt.Enabled = False
         iva.Enabled = False
         totalvta.Enabled = False
         btnCoVta.Enabled = False
-        cargadatos()
+        btnCancel.Enabled = False
+        ''cargadatos()
 
     End Sub
     Public Sub cargadatos()
@@ -134,8 +142,8 @@
         DataMedi.Visible = False
         btnre9.Enabled = False
         btnre9.Visible = False
-        detvmed.Enabled = False
-        detvmed.Visible = False
+        btndetvmed.Enabled = False
+        btndetvmed.Visible = False
         habilita()
     End Sub
 
@@ -170,7 +178,15 @@
     End Sub
 
     Public Sub habilita()
-        BTNEREVTA.Enabled = True
+        If valida = 1 Then
+            BTNEREVTA.Enabled = False
+            btnCoVta.Enabled = True
+            btnCancel.Enabled = True
+        Else
+            BTNEREVTA.Enabled = True
+            btnCoVta.Enabled = False
+            btnCancel.Enabled = False
+        End If
         cvvta.Enabled = False
         Label1.Enabled = True
         Label2.Enabled = True
@@ -178,13 +194,13 @@
         panelTotal.Enabled = True
         addm.Enabled = True
         btnadd.Enabled = True
-        btnCancel.Enabled = True
         data1.Enabled = True
         data2.Enabled = True
         ctpag.Enabled = True 'pa que cambie'
+
     End Sub
     Public Sub deshabilita()
-        BTNEREVTA.Enabled = False
+        BTNEREVTA.Enabled = True
         cvvta.Enabled = False
         Label1.Enabled = False
         Label2.Enabled = False
@@ -255,9 +271,9 @@
                                     MsgBox("EL DEPARTAMENTO AL QUE PERTENECE ESTE USUARIO NO ESTA PERMITIDO PARA REALIZAR ESTE TIPO DE OPERACION")
                                 Else
                                     MsgBox("VENTA CANCELADA")
-                                    menuprin.Enabled = True
-                                    menuprin.Visible = True
-                                    Close()
+                                    limpiartodo()
+                                    cargadamed()
+                                    cargadaprod()
                                     'AÑADIR LOS CAMPOS QUE FALTAN'
 
                                 End If
@@ -270,13 +286,14 @@
     End Sub
 
     Private Sub btnCoVta_Click_1(sender As Object, e As EventArgs) Handles btnCoVta.Click
+        ban = New ADODB.Parameter
 
         'ESTA PARTE LA CHECAS SI LA DEJAMOS ASI O NO, LO QUE PASA ES QUE PODRIA QUEDAR ASI POR SI LA DOÑA LAHACE DE PEDO POR QUE NO
         '"ES FUNCIONAL" Y ASI ENTONCES POR ESO LO MODIFICQUE'
 
         If ctpag.SelectedItem IsNot Nothing Then
             If (tpago = ctpag.SelectedItem.ToString) Then 'AQUI ME DICE SI SE QUEDO EN EFECTIVO O NEL'
-                MsgBox("La cve del la venta es: " & clavevta & " INSERCION CORRECTA")
+                MsgBox("La cve del la venta es: " & Val(cvvta.Text) & " INSERCION CORRECTA")
             Else
                 ban = New ADODB.Parameter
                 comanV = New ADODB.Command
@@ -331,25 +348,49 @@
                         End If
                     End If
                 End If
-                MsgBox("La cve del la venta es: " & clavevta & " INSERCION CORRECTA")
+                MsgBox("La cve del la venta es: " & Val(cvvta.Text) & " INSERCION CORRECTA")
             End If
         End If
+        MsgBox("La cve del la venta es: " & Val(cvvta.Text) & " INSERCION CORRECTA")
         MessageBox.Show("VENTA REALIZADA CON EXITO")
 
-        'CHECA SI SE LA DEJAS ESTOS CAMBIOS A VER QUE
-        'DICES Y SI NO, LO DEJAMOS COMO ESTABA ANTERIORMENTE '
+        ''CHECA SI SE LA DEJAS ESTOS CAMBIOS A VER QUE
+        ''DICES Y SI NO, LO DEJAMOS COMO ESTABA ANTERIORMENTE '
 
+        'menuprin.Enabled = True
+        'menuprin.Visible = True
+        'Close()
+        'Paulino:Limpiamos lo valores'
+
+        limpiartodo()
+        If depa = "VENTAS" Then
+            MessageBox.Show("CONTACTE CON EL ENCARGADO O GERENTE PARA ELIMINAR ESTA VENTA, EN DADO CASO DE QUE NO
+        SE HAYA EFECTUADO DE MANERA CORRECTA LA VENTA")
+        End If
+    End Sub
+
+    Private Sub BTNEREVTA_Click(sender As Object, e As EventArgs) Handles BTNEREVTA.Click
+        ' MsgBox("La cve del la venta es: " & clave & " INSERCION CORRECTA")
+        'MessageBox.Show("HABLE CON EL ENCARGADO O GERENTE PARA ELIMINAR ESTA VENTA, EN DADO CASO DE QUE NO
+        'SE HAYA EFECTUADO DE MANERA CORRECTA ALGUNA VENTA")
         menuprin.Enabled = True
         menuprin.Visible = True
         Close()
     End Sub
-
-    Private Sub BTNEREVTA_Click(sender As Object, e As EventArgs) Handles BTNEREVTA.Click
-        MsgBox("La cve del la venta es: " & clavevta & " INSERCION CORRECTA")
-        MessageBox.Show("HABLE CON EL ENCARGADO O GERENTE PARA ELIMINAR ESTA VENTA, EN DADO CASO DE QUE NO \n
-        SE HAYA EFECTUADO DE MANERA CORRECTA")
-        menuprin.Enabled = True
-        menuprin.Visible = True
-        Close()
+    Public Sub limpiartodo()
+        'se limpian los datas y los campos de la venta'
+        detvmed.vali2 = 0
+        detvtam.vali = 0
+        data1.DataSource = Nothing
+        data2.DataSource = Nothing
+        subt.Text = FormatCurrency(0)
+        iva.Text = FormatCurrency(0)
+        totalvta.Text = FormatCurrency(0)
+        cvvta.Text = 0
+        btnCoVta.Enabled = False
+        btnCancel.Enabled = False
+        valida = 0
+        btnCancel.Enabled = False
+        BTNEREVTA.Enabled = True
     End Sub
 End Class
