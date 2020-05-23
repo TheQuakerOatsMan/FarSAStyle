@@ -95,7 +95,7 @@ Partial Class detvmed
         Me.btnre10.BackColor = System.Drawing.Color.Navy
         Me.btnre10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnre10.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnre10.Location = New System.Drawing.Point(298, 187)
+        Me.btnre10.Location = New System.Drawing.Point(312, 187)
         Me.btnre10.Name = "btnre10"
         Me.btnre10.Size = New System.Drawing.Size(145, 36)
         Me.btnre10.TabIndex = 15

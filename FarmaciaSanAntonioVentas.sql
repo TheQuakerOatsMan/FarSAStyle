@@ -116,6 +116,8 @@ SELECT * FROM COMPRAS
 select * from usuarios
 SELECT * FROM VENTAS
 select * from detvtamed
+SELECT * FROM MEDICAMENTOS
+SELECT * FROM PRODUCTOS
 select cvemp from usuarios where nusuario='EL PODER X' AND contrasena ='1234'
 SELECT * FROM USUARIOS
 
